@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cat:CATEGORIES xmlns:cat="http://schemas.microsoft.com/VisualStudio/2008/workitemtracking/categories">
+  <!-- Usage: for resilience in Test system. Even if WITs have different name, they can be referred to by the category.  Categories.xml is the file that changed when Bug was renamed to Problem.  All Testing related categories have been deleted. -->
+  <CATEGORY name="Bug Category" refname="Microsoft.BugCategory">
+    <DEFAULTWORKITEMTYPE name="Problem" />
+  </CATEGORY>
+  <CATEGORY name="Feature Category" refname="Microsoft.FeatureCategory">
+    <DEFAULTWORKITEMTYPE name="Feature" />
+  </CATEGORY>
+  <CATEGORY name="Requirement Category" refname="Microsoft.RequirementCategory">
+    <DEFAULTWORKITEMTYPE name="Requirement" />
+  </CATEGORY>
+  <CATEGORY name="Code Review Request Category" refname="Microsoft.CodeReviewRequestCategory">
+    <DEFAULTWORKITEMTYPE name="Code Review Request" />
+  </CATEGORY>
+  <CATEGORY name="Code Review Response Category" refname="Microsoft.CodeReviewResponseCategory">
+    <DEFAULTWORKITEMTYPE name="Code Review Response" />
+  </CATEGORY>
+  <CATEGORY name="Feedback Request Category" refname="Microsoft.FeedbackRequestCategory">
+    <DEFAULTWORKITEMTYPE name="Feedback Request" />
+  </CATEGORY>
+  <CATEGORY name="Feedback Response Category" refname="Microsoft.FeedbackResponseCategory">
+    <DEFAULTWORKITEMTYPE name="Feedback Response" />
+  </CATEGORY>
+  <CATEGORY name="Task Category" refname="Microsoft.TaskCategory">
+    <DEFAULTWORKITEMTYPE name="Task" />
+  </CATEGORY>
+  <CATEGORY name="Change Request Category" refname="Microsoft.ChangeRequestCategory">
+    <DEFAULTWORKITEMTYPE name="Change Request" />
+  </CATEGORY>
+  <CATEGORY name="Hidden Types Category" refname="Microsoft.HiddenCategory">
+    <DEFAULTWORKITEMTYPE name="Code Review Request" />
+    <WORKITEMTYPE name="Code Review Response" />
+    <WORKITEMTYPE name="Feedback Request" />
+    <WORKITEMTYPE name="Feedback Response" />
+    <WORKITEMTYPE name="Feature" />
+  </CATEGORY>
+</cat:CATEGORIES>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tasks>
+  <task id="UploadStructure" name="Creating project structure" plugin="Microsoft.ProjectCreationWizard.Classification" completionMessage="Team project structure created.">
+    <taskXml>
+      <Nodes>
+        <Node StructureType="ProjectLifecycle" Name="Iteration" xmlns="">
+          <Children>
+            <Node StructureType="ProjectLifecycle" Name="Iteration 0" />
+            <Node StructureType="ProjectLifecycle" Name="Iteration 1" />
+            <Node StructureType="ProjectLifecycle" Name="Iteration 2" />
+          </Children>
+        </Node>
+        <Node StructureType="ProjectModelHierarchy" Name="Area" xmlns="" />
+      </Nodes>
+      <!-- In the Classification.xml, MS Project related field mapping reference to FieldMapping.xml has been removed. -->
+    </taskXml>
+  </task>
+</tasks>

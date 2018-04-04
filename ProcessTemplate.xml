@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProcessTemplate>
+  <metadata>
+  <!-- The ProcessTemplate.xml file has been customized.  The name is CMMI_X -->
+    <name>CMMI_X</name>
+    <description>This template is for more formal medical projects requiring a framework for change requests, problem reports and an auditable record of decisions.  It is designed to integrate well with SpiraTest.</description>
+    <version type="10efbd0f-edbd-4b8b-a137-c7a6f32cd4dd" major="15" minor="5" />
+    <!-- The following TFS plug-ins are deleted: Test Management, Lab.  The reason is that testing is to be done in SpiraTeam  -->
+    <plugins>
+      <plugin name="Microsoft.ProjectCreationWizard.Classification" wizardPage="false" />
+      <plugin name="Microsoft.ProjectCreationWizard.Reporting" wizardPage="false" />
+      <plugin name="Microsoft.ProjectCreationWizard.Portal" wizardPage="true" />
+      <plugin name="Microsoft.ProjectCreationWizard.Groups" wizardPage="false" />
+      <plugin name="Microsoft.ProjectCreationWizard.WorkItemTracking" wizardPage="false" />
+      <plugin name="Microsoft.ProjectCreationWizard.VersionControl" wizardPage="true" />
+      <plugin name="Microsoft.ProjectCreationWizard.Build" wizardPage="false" />
+    </plugins>
+  </metadata>
+  <!-- We don't use MS Project Server or MS Test Management so those related groups have been deleted -->
+  <groups>
+    <group id="Classification" description="Structure definition for the project." completionMessage="Project Structure uploaded.">
+      <dependencies>
+      </dependencies>
+      <taskList filename="Classification\Classification.xml" />
+    </group>
+    <group id="Groups" description="Create Groups and assign Permissions." completionMessage="Groups created and Permissions assigned.">
+      <dependencies>
+        <dependency groupId="Classification" />
+      </dependencies>
+      <taskList filename="Groups and Permissions\GroupsandPermissions.xml" />
+    </group>
+    <group id="Reporting" description="Project reports uploading." completionMessage="Project reporting tasks completed.">
+      <dependencies>
+        <dependency groupId="Classification" />
+        <dependency groupId="WorkItemTracking" />
+        <dependency groupId="VersionControl" />
+      </dependencies>
+      <taskList filename="Reports\ReportsTasks.xml" />
+    </group>
+    <group id="WorkItemTracking" description="Workitem definitions uploading." completionMessage="Work item tracking tasks completed.">
+      <dependencies>
+        <dependency groupId="Classification" />
+        <dependency groupId="Groups" />
+      </dependencies>
+      <taskList filename="WorkItem Tracking\WorkItems.xml" />
+    </group>
+    <group id="VersionControl" description="Creating version control." completionMessage="Version control task completed.">
+      <dependencies>
+        <dependency groupId="Classification" />
+        <dependency groupId="Groups" />
+        <dependency groupId="WorkItemTracking" />
+      </dependencies>
+      <taskList filename="Version Control\VersionControl.xml" />
+    </group>
+    <group id="Build" description="Build default processes uploading." completionMessage="Build default processes uploaded.">
+      <dependencies>
+        <dependency groupId="VersionControl" />
+        <dependency groupId="Groups" />
+      </dependencies>
+      <taskList filename="Build\Build.xml" />
+    </group>
+  </groups>
+</ProcessTemplate>
