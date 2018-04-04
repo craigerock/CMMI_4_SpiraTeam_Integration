@@ -1,6 +1,9 @@
 # CMMI_4_SpiraTeam_Integration
 This is a Process template for TFS 2017.2 that is compatible with SpiraTeam 5.3.x integration.  These process templates will probably work with newer versions of TFS and SpiraTeam, with little or no changes.
 
+Microsoft gives plenty of instructions on how to import a process template via Visual Studio into TFS so I won't cover that here.  Since there is already a CMMI process template in TFS you will need to give this one a different name.  Another practical tip is that these are all XML files that can be easily edited in your favorite XML editor (mine is Visual Studio Code).  Just be sure to follow the format already in these files and consult Microsoft documentation if you plan any major deviations from these templates.  TFS will validate your import, so you don't have to worry so much.  If it does not pass validation (on the TFS server) check the TFS log and try again.
+Worse case, you can always go back to a default process template, and start again.
+
 All the Microsoft Test processes have been removed.  Instead this template serves to separate Developers from Testers by TFS permissions.  Testers do their work on SpiraTeam mostly and Developers do all their work with TFS.  More details later.  If there are any questions, please create an issue.
 
 -The ISO 62304 standard was kept in mind when editing this process template and the software development environment is a modified Waterfall in that we plan, then code, then test, then release.
