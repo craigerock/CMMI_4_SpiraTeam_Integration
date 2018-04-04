@@ -9,6 +9,6 @@ The ISO 62304 standard was kept in mind when editing this process template and t
 -Epic has been removed
 -Feature has been changed into Change Request so that on the Work Backlog, we see a new order, first Change Request, then Requirement, then Tasks.  Tasks and Problems show up on the Kanban board view with their Requirement in the same row.  For us this made sense, since Requirements came out of Change Requests that have to be approved first.
 -Fields on some forms have been customized.
--A TFS_Denied_Users group was created.  All non-administrator users are to be added to this group (i.e. actually the developer group) to deny certain state transitions to all developers such as Requirement = "Active to Closed" state transitions.  This ensures only the team leader (and administrator) can close a requirement, and so on.
+-A TFS_Denied_Users group should be created in TFS and is supported by this template.  All non-administrator users are to be added to this group (i.e. actually the developer group) to deny certain state transitions to all developers such as Requirement = "Active to Closed" state transitions.  This ensures only the team leader (and administrator) can close a requirement, and so on.  It is important that TFS permissions (groups and users) are setup in TFS as an action in harmony with this process template, or lots of features in the template won't work.
 
 Readme not yet finished ...
