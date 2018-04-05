@@ -1,4 +1,4 @@
-# TFS CMMI_4_SpiraTeam_Integration
+# TFS CMMI_process template used with SpiraTeam_Integration
 This is a TFS Process template for TFS 2017.2 that is compatible with SpiraTeam 5.3.x integration.  These process templates will probably work with newer versions of TFS and SpiraTeam, with little or no changes.
 
 Microsoft gives plenty of instructions on how to import a process template via Visual Studio into TFS so I won't cover that here.  Since there is already a CMMI process template in TFS you will need to give this one a different name.  Another practical tip is that these are all XML files that can be easily edited in your favorite XML editor (mine is Visual Studio Code).  Just be sure to follow the format already in these files and consult Microsoft documentation if you plan any major deviations from these templates.  TFS will validate your import, so you don't have to worry so much.  If it does not pass validation (on the TFS server) check the TFS log and try again.
